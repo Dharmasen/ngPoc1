@@ -1,0 +1,13 @@
+<div style="background-color:darkgray;width:500px; height:1100px;">
+    <h2>Main Parent</h2>
+    <app-base-parent (SendToMain)=baseData_get($event)></app-base-parent>
+  
+    <div>
+        <app-student [student_dataset]="mainData.student_list"></app-student>
+    </div>
+
+    <div>
+        <app-employee [employee_dataset]="mainData.employee_list"></app-employee>
+    </div>
+    
+</div>

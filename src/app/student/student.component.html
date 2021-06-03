@@ -1,0 +1,21 @@
+<div style="background-color:darkkhaki; width:400px; height:400px;">
+<h3>Student Page</h3>
+        
+    <table>
+            <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>                                     
+            </tr>
+            <tr  *ngFor ="let d of student_dataset">
+                    <td>{{d.std_firstname}}</td>
+                    <td>{{d.std_lastname}}</td> 
+                    <td>
+                         <div style="background-color:khaki; width:200px; height:100px;">                                                             
+                                <app-std-details [student_dtls]="d.std_subjectDetails"></app-std-details>                               
+                        </div>
+                    </td>                                       
+            </tr>      
+    </table>
+</div>
+
+

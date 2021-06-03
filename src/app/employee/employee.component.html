@@ -1,0 +1,22 @@
+
+<div style="background-color:darkkhaki; width:400px; height:500px;">
+<h3>Employee Page</h3>
+        
+    <table>
+            <tr> 
+                    <th>Firstname</th>
+                    <th>Lastname</th>                                     
+            </tr>
+
+            <tr  *ngFor ="let d of employee_dataset">
+                    <td>{{d.employeeFirstName}} </td>
+                    <td>{{d.employeeLastName}} </td>
+                    
+                    <td>
+                       <div style="background-color:khaki; width:200px; height:100px;">
+                                <app-emp-details [employee_dtls]="d.emp_add" ></app-emp-details>                       
+                       </div>     
+                    </td>                                                       
+            </tr>      
+    </table>
+</div>
